@@ -1,8 +1,8 @@
-# Automatically updated by the winget bot at 2025/Feb/25
+# Created with YamlCreate.ps1 Dumplings Mod
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.version.1.9.0.schema.json
 
-PackageIdentifier: WonderIdea.MangoAnimationMaker
-PackageVersion: 3.0.801
+PackageIdentifier: ToEverything.AFFiNE
+PackageVersion: 0.20.2
 DefaultLocale: en-US
 ManifestType: version
 ManifestVersion: 1.9.0

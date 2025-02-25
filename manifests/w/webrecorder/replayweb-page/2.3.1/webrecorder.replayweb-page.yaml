@@ -1,8 +1,8 @@
-# Automatically updated by the winget bot at 2025/Feb/25
+# Created using wingetcreate 1.9.4.0
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.version.1.9.0.schema.json
 
-PackageIdentifier: WonderIdea.MangoAnimationMaker
-PackageVersion: 3.0.801
+PackageIdentifier: webrecorder.replayweb-page
+PackageVersion: 2.3.1
 DefaultLocale: en-US
 ManifestType: version
 ManifestVersion: 1.9.0
