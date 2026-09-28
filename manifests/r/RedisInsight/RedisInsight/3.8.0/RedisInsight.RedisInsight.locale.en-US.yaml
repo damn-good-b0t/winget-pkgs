@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.12.0.schema.json
+# Created with winmatsch
+
+PackageIdentifier: RedisInsight.RedisInsight
+PackageVersion: 3.8.0
+PackageLocale: en-US
+Publisher: Redis Ltd.
+PublisherUrl: https://redis.io/company/
+PublisherSupportUrl: https://redis.io/support/
+PrivacyUrl: https://redis.io/legal/privacy-policy/
+PackageName: Redis Insight
+PackageUrl: https://redis.io/insight/
+License: Proprietary
+LicenseUrl: https://www.redis.io/legal/redis-insight-license-terms/
+Copyright: Copyright © 2024 Redis Ltd.
+CopyrightUrl: https://redis-doc-test.readthedocs.io/en/latest/topics/trademark/
+ShortDescription: Visualize and optimize Redis data, connect to RDI, and more.
+Description: |
+  Redis Insight is a powerful tool for visualizing and optimizing data in Redis, making real-time application development easier and more fun than ever before. Redis Insight lets you do both GUI- and CLI-based interactions in a fully-featured desktop GUI client.
+Tags:
+- database-gui
+- redis
+- redis-gui
+- redis-gui-client
+ReleaseNotes: |-
+  This is the General Availability (GA) release of Redis Insight 3.8.0, which includes new features, improvements, and bug fixes.
+
+  ## Headlines
+
+  • Full support for the new **Array** data type in Redis 8.8：create Arrays manually or from bundled sample datasets, then browse, search, aggregate, edit, and delete elements end-to-end from Redis Insight.
+  • A new **What's New** popup highlights the top features of each release right after you upgrade, with per-version browsing and recommended try-it actions; re-open it anytime from Help.
+  • Choose between **IPv4 and IPv6** when connecting to a database, giving explicit control in environments where one protocol doesn't resolve correctly.
+
+  ## Details
+
+  • **Arrays** are now a supported key type：create them from the Add Key panel — manually in contiguous or sparse mode, or in one click from one of three bundled sample datasets.
+  • Manage Array elements from the key details view：add or append elements, edit values inline or in a multiline Monaco editor, and delete by single element, multi-select, or index range — with a toggleable command preview across all Array forms.
+  • Search within Arrays using multi-predicate queries with AND/OR logic and a nearby-elements context band, and run aggregations over elements from the dedicated Aggregate tab. Integer values above 2^53 keep exact precision end to end.
+  • View values as **Markdown**：a new value format renders stored values as formatted Markdown for every key type.
+  • "Redis Query Engine" is now called "Redis Search" throughout the app.
+  • Host and port are now editable for non-managed database connections, so address changes no longer require re-adding the database.
+  • Added a **Copy diagnostics** button in Settings that copies your app version, OS, and build details, ready to paste into a GitHub issue or support request.
+  • [#6047](https://github.com/redis/RedisInsight/issues/6047) Azure Entra ID sign-in now supports multi-tenant setups, fixing authentication with Azure Managed Redis when your account's tenant differs from the resource tenant.
+
+  ## New Contributors
+
+  • @saidake made their first contribution in https://github.com/redis/RedisInsight/pull/6143
+
+  **SHA-512 Checksums**
+
+  https://redis.io/docs/latest/develop/tools/insight/release-notes/v.3.8.0/
+
+  **Full Changelog**：https://github.com/redis/RedisInsight/compare/3.6.0...3.8.0
+
+  Store (App Store & Microsoft Store) format
+
+  • Support for the new Array data type in Redis 8.8：create, browse, search, aggregate, and edit Arrays
+  • What's New popup showing feature highlights after each upgrade
+  • Option to choose between IPv4 and IPv6 when connecting to a database
+  • New Markdown value format for viewing values of any key type
+  • Editable host and port for existing database connections
+  • Copy diagnostics button in Settings for easier issue reporting
+  • Azure Entra ID sign-in support for multi-tenant setups
+ReleaseNotesUrl: https://github.com/redis/RedisInsight/releases/tag/3.8.0
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0
