@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+# Created with winmatsch
+
+PackageIdentifier: RicardoCabral.icuvisor
+PackageVersion: 1.7.3
+InstallerLocale: und
+InstallerType: wix
+Scope: user
+UpgradeBehavior: install
+ReleaseDate: 2026-10-09
+InstallationMetadata:
+  DefaultInstallLocation: "%LocalAppData%\\Programs\\icuvisor"
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/ricardocabral/icuvisor/releases/download/v1.7.3/icuvisor_1.7.3_windows_amd64.msi
+  InstallerSha256: EAF17F69C87E36110940B86DB1CE1429B8789E5F7DD44E67BE608CCC113AF57D
+  ProductCode: "{D658284C-D030-4033-BE07-4D4755AF624C}"
+  AppsAndFeaturesEntries:
+  - ProductCode: "{D658284C-D030-4033-BE07-4D4755AF624C}"
+    UpgradeCode: "{8F557483-04AB-41DF-B138-3F979AF6496F}"
+- Architecture: arm64
+  InstallerUrl: https://github.com/ricardocabral/icuvisor/releases/download/v1.7.3/icuvisor_1.7.3_windows_arm64.msi
+  InstallerSha256: C9F7A127DAA69E6018086339A6028A2111DA57A464403AEAFCB45AB60F9DA67E
+  ProductCode: "{799D1848-8F19-408C-B63B-24277C299FBE}"
+  AppsAndFeaturesEntries:
+  - ProductCode: "{799D1848-8F19-408C-B63B-24277C299FBE}"
+    UpgradeCode: "{8F557483-04AB-41DF-B138-3F979AF6496F}"
+ManifestType: installer
+ManifestVersion: 1.12.0
