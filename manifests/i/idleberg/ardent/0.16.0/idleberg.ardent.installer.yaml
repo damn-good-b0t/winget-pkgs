@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+# Created with winmatsch
+
+PackageIdentifier: idleberg.ardent
+PackageVersion: 0.16.0
+InstallerType: zip
+NestedInstallerType: portable
+NestedInstallerFiles:
+- RelativeFilePath: ardent.exe
+Commands:
+- ardent
+ReleaseDate: 2026-10-09
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/idleberg/ardent/releases/download/v0.16.0/ardent-0.16.0-windows-x64.zip
+  InstallerSha256: 13AACFABBE700C4A34F722DA1FFD36E5713A7390B71E17768BFB2D60FC7D497B
+- Architecture: arm64
+  InstallerUrl: https://github.com/idleberg/ardent/releases/download/v0.16.0/ardent-0.16.0-windows-arm64.zip
+  InstallerSha256: CEBC61A2D915D658A31A3F900A0B5A8710C65FA4810D862277929D46EBC65172
+ManifestType: installer
+ManifestVersion: 1.12.0
