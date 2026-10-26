@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+# Created with winmatsch
+
+PackageIdentifier: Nbauma109.JDGUIDuo
+PackageVersion: 2.0.116
+InstallerLocale: en-US
+InstallerType: inno
+Scope: machine
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+InstallerSwitches:
+  Silent: /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+  SilentWithProgress: /SILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+Dependencies:
+  PackageDependencies:
+  - PackageIdentifier: Microsoft.VCRedist.2015+.x64
+ReleaseDate: 2026-10-26
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/nbauma109/jd-gui-duo/releases/download/2.0.116/jd-gui-duo-windows-2.0.116-setup.exe
+  InstallerSha256: E098B47D11C3DC68D4DA3C3FE3764E37F3ECA781241DFCEC475A157267A7A434
+ManifestType: installer
+ManifestVersion: 1.12.0
