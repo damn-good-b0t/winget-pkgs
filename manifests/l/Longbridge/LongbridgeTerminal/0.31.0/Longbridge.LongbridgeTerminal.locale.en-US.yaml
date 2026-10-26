@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.12.0.schema.json
+# Created with winmatsch
+
+PackageIdentifier: Longbridge.LongbridgeTerminal
+PackageVersion: 0.31.0
+PackageLocale: en-US
+Publisher: Longbridge
+PublisherUrl: https://longbridge.com/
+PublisherSupportUrl: https://github.com/longbridge/longbridge-terminal/issues
+Author: Longbridge
+PackageName: Longbridge Terminal
+PackageUrl: https://github.com/longbridge/longbridge-terminal
+License: MIT
+LicenseUrl: https://github.com/longbridge/longbridge-terminal/blob/HEAD/LICENSE
+ShortDescription: AI-native CLI for Longbridge Securities — real-time market data, portfolio, and trading for HK/US/A-share/SG markets
+Description: |-
+  Longbridge Terminal is an AI-native command-line tool for the Longbridge Securities platform.
+  It provides real-time market data, portfolio management, and trading across HK, US, A-share, and
+  Singapore markets. Outputs structured JSON for AI-agent tool-calling and also ships a full-screen
+  TUI for interactive monitoring.
+
+  Key capabilities:
+  - Real-time quotes, depth, K-lines, options, and warrants
+  - Account balances, stock and fund positions
+  - Order submission, modification, cancellation, and execution history
+  - Designed for scripting, AI-agent integration, and daily trading workflows
+Moniker: longbridge
+Tags:
+- cli
+- finance
+- longbridge
+- market-data
+- portfolio
+- rust
+- securities
+- trading
+- tui
+ReleaseNotes: |-
+  ## v0.31.0
+
+  • **Longbridge US accounts work end to end.** `assets`, `portfolio`, `positions`, `cash-flow`, `exchange-rate`, `order` (today and `--history`) and `order detail` call the US asset and order APIs when you are signed in with a US account. `--format json` keeps the same keys and shape as AP accounts; fields that only US accounts return are marked `(US only)` in `--schema`, and `check --format json` now reports `dc_region`. If a script parsed the previous US output of `positions` (an object with `stock_list`), update it — it is now the same array as on AP accounts.
+  • **`order executions` works on US accounts.** History comes from `/v1/trade/execution/history`, which is not filtered by execution time and can lag across days near the edges of the range. `side` is filled from the account's orders and shows `Unknown` when it can't be resolved.
+  • **AP-only commands say what to use instead.** `fund-positions` and `margin-ratio` on a US account fail without sending a request and name the alternative.
+  • **`longbridge serve` adds `trade.us_query_orders` and `trade.us_order_detail`.** AP-only methods called from a US account return an error naming the US method to call.
+  • **Safer US cancel / replace.** The preview no longer issues a confirmation code when the order can't be fetched, and US order ids must be digits.
+  • `rank --count` is honored (#336).
+
+  **Full changelog**：https://github.com/longbridge/longbridge-terminal/compare/v0.30.0...v0.31.0
+ReleaseNotesUrl: https://github.com/longbridge/longbridge-terminal/releases/tag/v0.31.0
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0

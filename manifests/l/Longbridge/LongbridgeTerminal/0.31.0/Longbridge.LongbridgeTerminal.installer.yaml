@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+# Created with winmatsch
+
+PackageIdentifier: Longbridge.LongbridgeTerminal
+PackageVersion: 0.31.0
+InstallerType: zip
+NestedInstallerType: portable
+NestedInstallerFiles:
+- RelativeFilePath: longbridge.exe
+Commands:
+- longbridge
+Dependencies:
+  PackageDependencies:
+  - PackageIdentifier: Microsoft.VCRedist.2015+.x64
+ReleaseDate: 2026-10-26
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/longbridge/longbridge-terminal/releases/download/v0.31.0/longbridge-terminal-windows-amd64.zip
+  InstallerSha256: 48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB
+ManifestType: installer
+ManifestVersion: 1.12.0
